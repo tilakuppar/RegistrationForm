@@ -69,7 +69,7 @@ app.post("/signup", async (req, res) => {
 
     await model.insertMany(data);
 
-    res.sendFile(path.join(__dirname, "public/login.html"));
+    res.redirect("/login");
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
