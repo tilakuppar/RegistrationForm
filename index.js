@@ -13,11 +13,11 @@ app.use(cors());
 //end of seting app
 
 //routing start
-app.get("/RegistrationForm", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.get("/RegistrationForm/login", (req, res) => {
+app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "public/login.html"));
 });
 //routing end
@@ -54,7 +54,7 @@ const SignIn = new mongoose.Schema({
 const model = new mongoose.model("Users", SignIn, "Users");
 
 //User Register
-app.post("/RegistrationForm/signup", async (req, res) => {
+app.post("/signup", async (req, res) => {
   try {
     const user = await model.findOne({ email: req.body.email });
 
@@ -77,7 +77,7 @@ app.post("/RegistrationForm/signup", async (req, res) => {
 });
 
 //User Login
-app.post("/RegistrationForm/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   try {
     const user = await model.findOne({ email: req.body.email });
 
