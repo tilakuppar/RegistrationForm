@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    opacity:90%;
+}
+.head h1{
+    box-shadow: 1px 1px 5px #000;
+    font-family: 'Josefin Sans', sans-serif;
+}
+form{
+    border-radius: 30px;
+    background-color: #313030bb;
+}
