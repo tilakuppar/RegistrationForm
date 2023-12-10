@@ -77,7 +77,7 @@ app.post("/RegistrationForm/signup", async (req, res) => {
 });
 
 //User Login
-app.post("RegistrationForm/login", async (req, res) => {
+app.post("/RegistrationForm/login", async (req, res) => {
   try {
     const user = await model.findOne({ email: req.body.email });
 
